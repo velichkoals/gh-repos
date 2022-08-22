@@ -5,6 +5,7 @@ import {
 } from '../store/github/github.api';
 import { useDebounce } from '../hooks/debounce';
 import { RepoCard } from '../components/RepoCard';
+import { Bars } from 'react-loader-spinner';
 
 export const HomePage = () => {
 	const [search, setSearch] = useState<string>('');
@@ -57,7 +58,17 @@ export const HomePage = () => {
 				)}
 				<div className='container'>
 					{areReposLoading && (
-						<p className='text-center'>Repositories are loading...</p>
+						<div className='flex justify-center mt-10'>
+							<Bars
+								height='150'
+								width='150'
+								color='rgb(96, 165, 250)'
+								ariaLabel='bars-loading'
+								wrapperStyle={{}}
+								wrapperClass=''
+								visible={true}
+							/>
+						</div>
 					)}
 					{repos?.map((repo) => (
 						<RepoCard repo={repo} key={repo.id} />

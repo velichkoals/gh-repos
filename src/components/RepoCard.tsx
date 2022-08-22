@@ -38,7 +38,7 @@ export const RepoCard = ({ repo }: { repo: IRepo }) => {
 				<div className='flex justify-end items-center'>
 					{!isFav && (
 						<button
-							className='py-2 px-4 mr-2 bg-yellow-400 text-white rounded hover:shadow-md transition-all'
+							className='py-2 px-4 mr-2 bg-yellow-400 text-white rounded hover:shadow-md transition-all w-[95px]'
 							onClick={addToFavourites}
 						>
 							Add
@@ -47,7 +47,7 @@ export const RepoCard = ({ repo }: { repo: IRepo }) => {
 
 					{isFav && (
 						<button
-							className='py-2 px-4 bg-red-400 text-white rounded hover:shadow-md transition-all'
+							className='py-2 px-4 mr-2 bg-red-400 text-white rounded hover:shadow-md transition-all w-[95px]'
 							onClick={removeFromFavourite}
 						>
 							Remove
