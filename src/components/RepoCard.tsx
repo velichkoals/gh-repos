@@ -15,7 +15,7 @@ export const RepoCard = ({ repo }: { repo: IRepo }) => {
 		setIsFav(true);
 	};
 
-	const removeFromFavourite = (event: React.MouseEvent<HTMLButtonElement>) => {
+	const removeFromFavourites = (event: React.MouseEvent<HTMLButtonElement>) => {
 		event.preventDefault();
 		removeFavourite(repo.html_url);
 		setIsFav(false);
@@ -48,7 +48,7 @@ export const RepoCard = ({ repo }: { repo: IRepo }) => {
 					{isFav && (
 						<button
 							className='py-2 px-4 mr-2 bg-red-400 text-white rounded hover:shadow-md transition-all w-[95px]'
-							onClick={removeFromFavourite}
+							onClick={removeFromFavourites}
 						>
 							Remove
 						</button>
