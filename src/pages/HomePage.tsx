@@ -52,6 +52,7 @@ export const HomePage = () => {
 								className='py-2 px-4 hover:bg-gray-400 hover:text-white transition-colors cursor-pointer'
 							>
 								{user.login}
+								Changes
 							</li>
 						))}
 					</ul>
